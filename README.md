@@ -26,7 +26,9 @@ Configure le bean correspondant à l'objet de type WizardInterface mentionné pl
 MeasureMeasure
 
 #######################################################################
+
 ressources
+
 #######################################################################
 Spring : IOC, DI... késako ?
 Dans cette quête, tu vas explorer des concepts fondamentaux du framework Spring : l'inversion de contrôle et l'injection de dépendances.
