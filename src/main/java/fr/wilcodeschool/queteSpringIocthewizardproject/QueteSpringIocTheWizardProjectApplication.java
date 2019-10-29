@@ -8,6 +8,8 @@ public class QueteSpringIocTheWizardProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(QueteSpringIocTheWizardProjectApplication.class, args);
+		// appel de start(){} dans la classe App
+
 	}
 
 }
