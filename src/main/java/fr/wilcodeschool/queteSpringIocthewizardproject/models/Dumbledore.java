@@ -12,7 +12,6 @@ public class Dumbledore implements WizardInterface {
 
 	@Override
 	public String giveAdvice() {
-		// TODO Auto-generated method stub
 		return null;
 
 	}
