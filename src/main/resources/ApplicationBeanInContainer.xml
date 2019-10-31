@@ -8,7 +8,13 @@
 
 
 <!-- beans specifiques au projet -->
+ <!-- Bean of the dependency at otherStyle() in DressWithOtherStyle-->
+    <bean id="myOtherStyle" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.DressWithOtherStyle">
+    </bean>
+<!--     dumbledore bean -->
 <bean id="dumbledore" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Dumbledore">
+      <!-- Injection in the constructor : -->
+        <constructor-arg ref="myOtherStyle"/>
     </bean>
 <bean id="gandalf" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Gandalf">
     </bean>
