@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @author franck Desmedt github/bigmoletos
  *
  */
-@Component
+@Component("dressWithOtherStyleId")
 public class DressWithOtherStyle implements DressWithOtherStyleInterface {
 	@Override
 	public String otherStyle() {

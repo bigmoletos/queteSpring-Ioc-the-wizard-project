@@ -5,6 +5,7 @@
 package fr.wilcodeschool.queteSpringIocthewizardproject.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,7 +20,7 @@ public class Gandalf implements WizardInterface {
 	 * @param changeDeStyle
 	 */
 	@Autowired
-	public Gandalf(DressWithOtherStyle changeDeStyle) {
+	public Gandalf(@Qualifier("dressWithOtherStyleId") DressWithOtherStyle changeDeStyle) {
 		this.changeDeStyleGandalf = changeDeStyle;
 	}
 
