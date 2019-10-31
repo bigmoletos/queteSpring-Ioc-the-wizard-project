@@ -13,6 +13,7 @@ public class QueteSpringIocTheWizardProjectApplication {
 		// appel de start(){} dans la classe App
 		App myapp = new App();
 
+		myapp.start1();
 		myapp.start();
 	}
 
