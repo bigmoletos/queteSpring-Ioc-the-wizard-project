@@ -18,16 +18,16 @@ public class App {
 	public void start1() {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				"classpath*:applicationContext.xml");
+				"classpath*:ApplicationBeanInContainer.xml");
 //		"theOutfit" fait le lien avec le fichier xml applicationContext.xml,
 //		c'est l'id du bean
-		Outfit myOutfit = context.getBean("theOutfit", Outfit.class);
+		Dumbledore myDumbledore = context.getBean("dumbledore", Dumbledore.class);
 
 		context.close();
 		// Outfit ourDress = new Outfit();
 		System.out.println("");
 		System.out.println("******************");
-		System.out.println(myOutfit.changeDress());
+		System.out.println(myDumbledore.changeDress());
 		System.out.println("******************");
 	}
 
