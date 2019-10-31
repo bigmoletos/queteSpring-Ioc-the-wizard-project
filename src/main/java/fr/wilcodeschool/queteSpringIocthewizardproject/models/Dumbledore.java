@@ -4,10 +4,14 @@
  */
 package fr.wilcodeschool.queteSpringIocthewizardproject.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * @author franck Desmedt github/bigmoletos
  *
  */
+@Component("dumbledoreId")
 public class Dumbledore implements WizardInterface {
 	private DressWithOtherStyle dressWithOtherStyle;
 
@@ -19,6 +23,7 @@ public class Dumbledore implements WizardInterface {
 	}
 
 	// Constructor with the cosyDrinkAdvice object passed as an argument
+	@Autowired
 	public Dumbledore(DressWithOtherStyle theNewStyle) {
 		this.dressWithOtherStyle = theNewStyle;
 	}

@@ -6,22 +6,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-
-<!-- beans specifiques au projet -->
- <!-- Bean of the dependency at otherStyle() in DressWithOtherStyle-->
-    <bean id="myOtherStyle" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.DressWithOtherStyle">
-    </bean>
-<!--     dumbledore bean -->
-<bean id="dumbledore" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Dumbledore">
-      <!-- Injection in the constructor : -->
-        <constructor-arg ref="myOtherStyle"/>
-    </bean>
-<!--   gandalf bean   -->
-<bean id="gandalf" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Gandalf">
-     <!-- Injection in the constructor : -->
-        <constructor-arg ref="myOtherStyle"/>
-<!--  outfit bean         -->
-    </bean>
-<bean id="outfit" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit">
-    </bean>
+<!-- context pour utilisation des annotations -->
+<context:component-scan base-package="fr.wilcodeschool.queteSpringIocthewizardproject.models">
+    </context:component-scan>
 </beans>

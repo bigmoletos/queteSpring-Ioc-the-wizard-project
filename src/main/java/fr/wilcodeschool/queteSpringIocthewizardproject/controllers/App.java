@@ -15,19 +15,14 @@ import fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit;
  *
  */
 public class App {
-	// version avec IOC et injection de dependance de
-	// DressWithOtherStyle.otherStyle()
-	public void start1() {
 
+//	version annotation avec IOC et DI
+	public void start3() {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath*:ApplicationBeanInContainer.xml");
-//		"theOutfit" fait le lien avec le fichier xml applicationContext.xml,
-//		c'est l'id du bean
-		Dumbledore myDumbledore = context.getBean("dumbledore", Dumbledore.class);
-		Gandalf myGandalf = context.getBean("gandalf", Gandalf.class);
-		Outfit myOutfit = context.getBean("outfit", Outfit.class);
-		context.close();
-		// Outfit ourDress = new Outfit();
+		Dumbledore myDumbledore = context.getBean("dumbledoreId", Dumbledore.class);
+		Gandalf myGandalf = context.getBean("gandalfId", Gandalf.class);
+		Outfit myOutfit = context.getBean("outfitId", Outfit.class);
 		System.out.println("");
 		System.out.println("******************");
 		System.out.println(myDumbledore.changeDress());
@@ -40,8 +35,36 @@ public class App {
 		System.out.println("******************");
 		System.out.println(myOutfit.changeDress());
 		System.out.println("******************");
-
 	}
+
+//	// version fichier xml ApplicationBeanInContainer avec IOC et injection de
+//	// dependance de
+//	// DressWithOtherStyle.otherStyle()
+//	public void start1() {
+//
+//		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+//				"classpath*:ApplicationBeanInContainer.xml");
+////		"theOutfit" fait le lien avec le fichier xml applicationContext.xml,
+////		c'est l'id du bean
+//		Dumbledore myDumbledore = context.getBean("dumbledore", Dumbledore.class);
+//		Gandalf myGandalf = context.getBean("gandalf", Gandalf.class);
+//		Outfit myOutfit = context.getBean("outfit", Outfit.class);
+//		context.close();
+//		// Outfit ourDress = new Outfit();
+//		System.out.println("");
+//		System.out.println("******************");
+//		System.out.println(myDumbledore.changeDress());
+//		System.out.println(myDumbledore.giveAdvice());
+//		System.out.println("******************");
+//		System.out.println("");
+//		System.out.println("******************");
+//		System.out.println(myGandalf.changeDress());
+//		System.out.println(myGandalf.giveAdvice());
+//		System.out.println("******************");
+//		System.out.println(myOutfit.changeDress());
+//		System.out.println("******************");
+//
+//	}
 
 	// version sans IOC et dependance forte
 	public void start2() {
