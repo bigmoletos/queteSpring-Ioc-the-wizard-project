@@ -25,7 +25,7 @@ public class App {
 //		c'est l'id du bean
 		Dumbledore myDumbledore = context.getBean("dumbledore", Dumbledore.class);
 		Gandalf myGandalf = context.getBean("gandalf", Gandalf.class);
-
+		Outfit myOutfit = context.getBean("outfit", Outfit.class);
 		context.close();
 		// Outfit ourDress = new Outfit();
 		System.out.println("");
@@ -38,6 +38,9 @@ public class App {
 		System.out.println(myGandalf.changeDress());
 		System.out.println(myGandalf.giveAdvice());
 		System.out.println("******************");
+		System.out.println(myOutfit.changeDress());
+		System.out.println("******************");
+
 	}
 
 	// version sans IOC et dependance forte

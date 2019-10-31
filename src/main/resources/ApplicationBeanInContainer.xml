@@ -16,9 +16,11 @@
       <!-- Injection in the constructor : -->
         <constructor-arg ref="myOtherStyle"/>
     </bean>
+<!--   gandalf bean   -->
 <bean id="gandalf" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Gandalf">
      <!-- Injection in the constructor : -->
         <constructor-arg ref="myOtherStyle"/>
+<!--  outfit bean         -->
     </bean>
 <bean id="outfit" class="fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit">
     </bean>
