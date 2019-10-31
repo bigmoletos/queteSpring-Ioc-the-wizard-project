@@ -9,10 +9,24 @@ package fr.wilcodeschool.queteSpringIocthewizardproject.models;
  *
  */
 public class Dumbledore implements WizardInterface {
+	private DressWithOtherStyle dressWithOtherStyle;
+
+	/**
+	 * 
+	 */
+	public Dumbledore() {
+		// TODO Auto-generated constructor stub
+	}
+
+	// Constructor with the cosyDrinkAdvice object passed as an argument
+	public Dumbledore(DressWithOtherStyle theNewStyle) {
+		dressWithOtherStyle = theNewStyle;
+	}
 
 	@Override
 	public String giveAdvice() {
-		return "Dumbledore give us advice";
+		return dressWithOtherStyle.otherStyle();
+//		return "Dumbledore give us advice";
 
 	}
 

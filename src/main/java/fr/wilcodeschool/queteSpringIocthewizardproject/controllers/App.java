@@ -14,7 +14,8 @@ import fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit;
  *
  */
 public class App {
-	// version avec IOC
+	// version avec IOC et injection de dependance de
+	// DressWithOtherStyle.otherStyle()
 	public void start1() {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
@@ -28,6 +29,7 @@ public class App {
 		System.out.println("");
 		System.out.println("******************");
 		System.out.println(myDumbledore.changeDress());
+		System.out.println(myDumbledore.giveAdvice());
 		System.out.println("******************");
 	}
 
