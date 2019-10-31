@@ -6,6 +6,7 @@ package fr.wilcodeschool.queteSpringIocthewizardproject.controllers;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import fr.wilcodeschool.queteSpringIocthewizardproject.models.Dumbledore;
 import fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit;
 
 /**
@@ -14,10 +15,12 @@ import fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit;
  */
 public class App {
 	// version avec IOC
-	public void start() {
+	public void start1() {
 
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"classpath*:applicationContext.xml");
+//		"theOutfit" fait le lien avec le fichier xml applicationContext.xml,
+//		c'est l'id du bean
 		Outfit myOutfit = context.getBean("theOutfit", Outfit.class);
 
 		context.close();
@@ -28,8 +31,8 @@ public class App {
 		System.out.println("******************");
 	}
 
-	// version sans IOC
-	public void start1() {
+	// version sans IOC et dependance forte
+	public void start2() {
 
 		Outfit ourDress = new Outfit();
 		System.out.println("");
@@ -37,7 +40,7 @@ public class App {
 		System.out.println(ourDress.changeDress());
 		System.out.println("******************");
 
-		Outfit dumbledore = new Dumledore();
+		Dumbledore dumbledore = new Dumbledore();
 		System.out.println("");
 		System.out.println("******************");
 		System.out.println(dumbledore.changeDress());
