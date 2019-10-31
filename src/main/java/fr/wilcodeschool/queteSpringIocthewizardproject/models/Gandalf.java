@@ -9,10 +9,18 @@ package fr.wilcodeschool.queteSpringIocthewizardproject.models;
  *
  */
 public class Gandalf implements WizardInterface {
+	private DressWithOtherStyle changeDeStyleGandalf;
+
+	/**
+	 * @param changeDeStyle
+	 */
+	public Gandalf(DressWithOtherStyle changeDeStyle) {
+		this.changeDeStyleGandalf = changeDeStyle;
+	}
 
 	@Override
 	public String giveAdvice() {
-		return "Gandalf give us advice";
+		return "Gandalf " + changeDeStyleGandalf.otherStyle();
 
 	}
 

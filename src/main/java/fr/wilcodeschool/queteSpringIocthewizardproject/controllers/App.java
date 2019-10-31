@@ -7,6 +7,7 @@ package fr.wilcodeschool.queteSpringIocthewizardproject.controllers;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import fr.wilcodeschool.queteSpringIocthewizardproject.models.Dumbledore;
+import fr.wilcodeschool.queteSpringIocthewizardproject.models.Gandalf;
 import fr.wilcodeschool.queteSpringIocthewizardproject.models.Outfit;
 
 /**
@@ -23,6 +24,7 @@ public class App {
 //		"theOutfit" fait le lien avec le fichier xml applicationContext.xml,
 //		c'est l'id du bean
 		Dumbledore myDumbledore = context.getBean("dumbledore", Dumbledore.class);
+		Gandalf myGandalf = context.getBean("gandalf", Gandalf.class);
 
 		context.close();
 		// Outfit ourDress = new Outfit();
@@ -30,6 +32,11 @@ public class App {
 		System.out.println("******************");
 		System.out.println(myDumbledore.changeDress());
 		System.out.println(myDumbledore.giveAdvice());
+		System.out.println("******************");
+		System.out.println("");
+		System.out.println("******************");
+		System.out.println(myGandalf.changeDress());
+		System.out.println(myGandalf.giveAdvice());
 		System.out.println("******************");
 	}
 

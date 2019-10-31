@@ -20,12 +20,12 @@ public class Dumbledore implements WizardInterface {
 
 	// Constructor with the cosyDrinkAdvice object passed as an argument
 	public Dumbledore(DressWithOtherStyle theNewStyle) {
-		dressWithOtherStyle = theNewStyle;
+		this.dressWithOtherStyle = theNewStyle;
 	}
 
 	@Override
 	public String giveAdvice() {
-		return dressWithOtherStyle.otherStyle();
+		return "Dumbledore " + dressWithOtherStyle.otherStyle();
 //		return "Dumbledore give us advice";
 
 	}
