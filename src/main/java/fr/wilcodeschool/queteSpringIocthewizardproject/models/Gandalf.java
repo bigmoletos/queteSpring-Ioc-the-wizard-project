@@ -12,15 +12,13 @@ public class Gandalf implements WizardInterface {
 
 	@Override
 	public String giveAdvice() {
-		return null;
-		// TODO Auto-generated method stub
+		return "Gandalf give us advice";
 
 	}
 
 	@Override
 	public String changeDress() {
-		return null;
-		// TODO Auto-generated method stub
+		return "Gandalf change dress by...";
 
 	}
 

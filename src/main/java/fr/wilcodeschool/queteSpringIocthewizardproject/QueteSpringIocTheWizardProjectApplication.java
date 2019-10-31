@@ -14,7 +14,7 @@ public class QueteSpringIocTheWizardProjectApplication {
 		App myapp = new App();
 
 		myapp.start1();
-		myapp.start();
+		// myapp.start();
 	}
 
 }

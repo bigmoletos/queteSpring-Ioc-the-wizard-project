@@ -36,5 +36,12 @@ public class App {
 		System.out.println("******************");
 		System.out.println(ourDress.changeDress());
 		System.out.println("******************");
+
+		Outfit dumbledore = new Dumledore();
+		System.out.println("");
+		System.out.println("******************");
+		System.out.println(dumbledore.changeDress());
+		System.out.println("******************");
+
 	}
 }

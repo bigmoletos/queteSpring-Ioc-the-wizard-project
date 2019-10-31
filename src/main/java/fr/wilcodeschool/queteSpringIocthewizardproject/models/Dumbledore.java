@@ -12,14 +12,13 @@ public class Dumbledore implements WizardInterface {
 
 	@Override
 	public String giveAdvice() {
-		return null;
+		return "Dumbledore give us advice";
 
 	}
 
 	@Override
 	public String changeDress() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Dumbledore change dress by...";
 	}
 
 }
